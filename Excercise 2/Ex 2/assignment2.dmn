@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1ydwch7" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.49.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.9.0">
+  <decision id="calculate-discount" name="Calculate Discount ">
+    <decisionTable id="DecisionTable_0bypzah" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0im8u7v" biodi:width="188">
+        <inputExpression id="LiteralExpression_15p1nmc" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ruqmid">
+        <inputExpression id="LiteralExpression_0tankjn" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" typeRef="number" biodi:width="192" />
+      <rule id="DecisionRule_0mohgqs">
+        <inputEntry id="UnaryTests_08gyuh3">
+          <text>customerTier</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13rm0cw">
+          <text>cartValue</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lxszy0">
+          <text>promoCode</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rbd2s5">
+          <text>totalDiscount</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12dibzj">
+        <inputEntry id="UnaryTests_0chbyyp">
+          <text>"PREMIUM"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08n0ii4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fsx1wy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jzp1sg">
+          <text>10</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0izx6ch">
+        <inputEntry id="UnaryTests_0m51jrr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kl2dvg">
+          <text>&gt;=5000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_006j0l7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ar375w">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gki57o">
+        <inputEntry id="UnaryTests_02j29yf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ddsv6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i1orec">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gg0liq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tcw091">
+        <inputEntry id="UnaryTests_19ptq2h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eazh1i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19jsims">
+          <text>"SAVE10"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06okj9v">
+          <text>10</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="Decision_1droah1_di" dmnElementRef="calculate-discount">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
